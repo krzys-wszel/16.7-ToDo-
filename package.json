@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack"
+    "build": "set NODE_ENV=production && npm run webpack",
+    "webpack": "webpack",
+    "start": "webpack-dev-server --inline --hot --config ./webpack.config.js"
   },
   "author": "krzys_wszel",
   "license": "ISC",
@@ -19,8 +21,10 @@
     "optimize-js-plugin": "0.0.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-hot-loader": "^3.0.0-beta.6",
     "style-loader": "^0.20.3",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.2"
   },
   "dependencies": {
     "uuid": "^3.2.1"

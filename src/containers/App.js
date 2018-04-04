@@ -2,6 +2,7 @@ import React from 'react';
 import uuid from 'uuid';
 import style from './App.css';
 import Title from '../components/Title';
+import Form from '../components/TodoForm';
 import List from '../components/TodoList';
 
 class App extends React.Component {
@@ -10,15 +11,15 @@ class App extends React.Component {
     this.state = {
       data: [{
         id: 1,
-        text: 'wstać'
+        text: 'clean room'
       }, 
-      {
+	  {
         id: 2,
-        text: 'żyć'
+        text: 'wash the dishes'
       }, 
-      {
+	  {
         id: 3,
-        text: 'spać'
+        text: 'feed my cat'
       }]
     };
   }
@@ -37,7 +38,8 @@ class App extends React.Component {
   render() {
     return (
       <div className={style.TodoApp}>
-        <Title title='Do zrobienia' length={this.state.data.length} />
+        <Title title='Lista zadań do wykonania:' length={this.state.data.length} />
+        <Form add={this.addTodo.bind(this)} />
         <List list={this.state.data} rem={this.removeTodo.bind(this)} />
       </div>
     );
@@ -45,4 +47,3 @@ class App extends React.Component {
 }
 
 export default App;
-

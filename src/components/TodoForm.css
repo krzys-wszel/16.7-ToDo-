@@ -1,0 +1,23 @@
+form {
+    font-size: 26px;
+    font-weight: 700;
+    padding: 10px 20px;
+}
+
+
+button {
+    width: 80px;
+    height: 40px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+
+input {
+    width: 180px;
+    height: 34px;
+    margin-left: 20px;
+    font-size: 18px;
+}
